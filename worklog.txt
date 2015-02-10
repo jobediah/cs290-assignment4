@@ -1,1 +1,22 @@
-Work log
+Work log:
+
+Start: Sun, 8 Feb 2015 16:00:51 -0700 
+End: Sun, 8 Feb 2015 22:54:51 -0700 
+Tasks: Adding worklog and completed multtable.php
+
+Start: 8 Feb 2015 22:54:51 -0700 
+End: 8 Feb 2015 23:35:51 -0700 
+Tasks: Completed loopback.php
+
+Start: Mon, 9 Feb 2015 22:08:33 -0700 
+End: Mon, 9 Feb 2015 22:28:33 -0700 
+Tasks: Added comments
+
+Start: Mon, 9 Feb 2015 18:05:09 -0700 
+End: Mon, 9 Feb 2015 23:23:09 -0700 
+Tasks: Completed login, content1, and content2
+
+
+
+
+
