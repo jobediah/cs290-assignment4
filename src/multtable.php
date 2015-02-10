@@ -9,17 +9,20 @@
 /* General syntax was acquired from class lectures, php.net, and w3schools. 
 Some implementation concepts came from the class discusion board.*/ 
 
+//Sets all the get variables
 $minColumn = $_GET["min-multiplicand"];
 $maxColumn = $_GET["max-multiplicand"];
 $minRow = $_GET["min-multiplier"];
 $maxRow = $_GET["max-multiplier"];
 $error = false;
 
+//Checks if variable does not have entered value
 if($minColumn == ""){
 	echo "You're missing your min-multiplicand value.</br>";
 	$error = true;
 }
 
+//Checks if variable is an integer and not a float
 elseif((float)$minColumn != (int)$minColumn || !is_numeric($minColumn)) {
 	echo "Please enter an integer for min-multiplicand.</br>";
 	$error = true;
@@ -56,6 +59,7 @@ elseif((float)$maxRow != (int)$maxRow || !is_numeric($maxRow)) {
 	$error = true;
 }
 
+//Checks if the min is less than the max
 if($minColumn >= $maxColumn){
 	echo "Your min-muliplicand needs to be less than your max-multiplicand.</br>";
 	$error = true;
@@ -66,6 +70,7 @@ if($minRow >= $maxRow){
 	$error = true;
 }
 
+//Checks if one of the flags were triggered
 if($error === false){
 	
 	$minColumn = (int)$minColumn;
@@ -73,15 +78,19 @@ if($error === false){
 	$minRow = (int)$minRow;
 	$maxRow = (int)$maxRow;
 	
+	//Set up table
 	echo 	"<table border='1' cellpadding='10'>                                                        
       		<thead>
       		<tr>
       		<th>";
+	//Set up header row
 	for($i = $minRow; $i < $maxRow+1; $i++){
   		echo 	" <th>$i ";
   	}
   	echo 	"</tr> </thead>";
   	echo 	"<tbody>";
+  	
+  	//Set up the rest of the cells
   	for($i = $minColumn; $i < $maxColumn+1; $i++){
   		echo 	" <tr>
   				<th>$i</th>";

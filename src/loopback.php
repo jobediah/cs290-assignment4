@@ -11,7 +11,7 @@ Some implementation concepts came from the class discusion board.*/
 
 $HTTPMethod = $_SERVER['REQUEST_METHOD'];
 
-
+// Sets form method to get
 if($HTTPMethod === 'GET'){
 	$input_array["type"] = "GET";
 	if(empty($_GET)){$input_array["parameters"] = null;}
@@ -19,6 +19,7 @@ if($HTTPMethod === 'GET'){
 	echo json_encode($input_array);
 }
 
+// Sets form method to get
 elseif($HTTPMethod === 'POST'){
 	$input_array["type"] = "POST";
 	if(empty($_POST)){$input_array["parameters"] = null;}
